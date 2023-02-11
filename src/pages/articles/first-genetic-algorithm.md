@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/Layout.astro
-draft: true
+draft: false
 title: Testing the title
 ---
 
-# Hello there!
+# Developing my first genetic algorithm

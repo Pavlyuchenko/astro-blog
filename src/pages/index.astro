@@ -4,30 +4,23 @@ import Article from "../components/Article.astro";
 
 const articles = [
     {
-        title: "Intro : The Virtuality Blog",
+        title: "First Genetic Algorithm",
         description:
             "Unsure of what this writing space is all about? Well let me explain in this short article.",
         image: "/logo.png",
-        href: "/articles/the-virtuality-blog",
+        href: "/articles/first-genetic-algorithm",
     },
     {
-        title: "Intro : The Virtuality Blog",
+        title: "Studium v zahraničí: Jak se dostat na univerzitu v Nizozemí",
         description:
             "Unsure of what this writing space is all about? Well let me explain in this short article.",
         image: "/logo.png",
-        href: "/articles/the-virtuality-blog",
-    },
-    {
-        title: "Intro : The Virtuality Blog",
-        description:
-            "Unsure of what this writing space is all about? Well let me explain in this short article.",
-        image: "/logo.png",
-        href: "/articles/the-virtuality-blog",
+        href: "/articles/studium-v-zahranici-nizozemsko",
     },
 ];
 ---
 
-<Layout title="Main Page | The Virtuality">
+<Layout title="Blog | Michal Pavlíček">
     <section id="newsletter-container">
         <div>
             <h2>Newsletter</h2>
@@ -56,6 +49,10 @@ const articles = [
             })
         }
     </section>
+
+    <section class="white" id="about-me"></section>
+
+    <footer class="white">Footer</footer>
 </Layout>
 
 <script>
