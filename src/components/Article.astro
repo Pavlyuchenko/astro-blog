@@ -1,0 +1,87 @@
+---
+export interface Props {
+    title: string;
+    description: string;
+    image: string;
+    href: string;
+}
+
+const { title, description, image, href } = Astro.props;
+---
+
+<div class="link-card">
+    <a href={href} class="link-card-a">
+        <img src={image} alt={title} />
+        <div>
+            <h2 class="article-title">
+                {title}
+                <span>&rarr;</span>
+            </h2>
+            <p class="article-description">{description}</p>
+        </div>
+    </a>
+</div>
+<style>
+    .link-card {
+        display: flex;
+        padding: 0.15rem;
+        background-color: white;
+        border: 2px solid #cdd;
+        border-radius: 0.5rem;
+        transition: 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+            0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    }
+
+    .link-card > a {
+        width: 100%;
+        text-decoration: none;
+        line-height: 1.4;
+        padding: 1rem 1.3rem;
+        border-radius: 0.35rem;
+        color: #111;
+        opacity: 0.8;
+    }
+    h2 {
+        margin: 0;
+        font-size: 1.25rem;
+        transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .article-description {
+        margin-top: 0.5rem;
+        margin-bottom: 0;
+        color: #444;
+    }
+    .link-card:is(:hover, :focus-within) {
+        background: #eee;
+    }
+    .link-card-a {
+        display: flex;
+        gap: 0.5rem;
+
+        width: 100%;
+        max-height: 150px;
+    }
+    .link-card-a img {
+        display: block;
+        max-width: 230px;
+        max-height: 90px;
+        width: auto;
+        height: auto;
+    }
+    .link-card-a > div {
+        margin-left: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    @media (max-width: 900px) {
+        .article-description {
+            display: none;
+        }
+        .link-card-a img {
+            max-height: 64px;
+        }
+    }
+</style>
