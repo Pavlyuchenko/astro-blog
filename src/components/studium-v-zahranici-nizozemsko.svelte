@@ -60,7 +60,7 @@
 </div>
 <section id="article">
     <div>
-        <p id="bbd305c8-913b-4fbd-ad90-7983683ea63e">
+        <p id="bbd305c8-913b-4fbd-ad90-7983683ea63e" class="first-paragraph">
             Před třemi týdny jsem poprvé ve svém životě vyrazil na vlastní pěst
             do cizí země. Do země, kde jsem nikoho neznal a kde pravděpodobně
             strávím alespoň následující tři roky. Rozhodl jsem se totiž po
@@ -718,6 +718,15 @@
 </section>
 
 <style>
+    .first-paragraph::first-letter {
+        font-size: 50px;
+        font-weight: 700;
+        float: left;
+        margin-right: 10px;
+
+        line-height: 1;
+    }
+
     #title {
         text-align: center;
         margin-top: 50px;
@@ -800,6 +809,9 @@
     a {
         color: var(--primary);
         font-weight: 600;
+    }
+    p {
+        font-size: 18px;
     }
 
     blockquote {
